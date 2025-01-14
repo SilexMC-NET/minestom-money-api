@@ -9,6 +9,12 @@ base {
     archivesName = "minestom-money-api"
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21) // Sostituisci con la versione desiderata
+    }
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
