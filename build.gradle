@@ -9,32 +9,6 @@ base {
     archivesName = "minestom-money-api"
 }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21) // Sostituisci con la versione desiderata
-    }
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-        }
-    }
-
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url  = "https://maven.pkg.github.com/SilexMC-NET/minestom-money-api"
-
-            credentials {
-                username = findProperty("github_username")
-                password = findProperty("github_token")
-            }
-        }
-    }
-}
-
 repositories {
     // Maven Central
     mavenCentral()
