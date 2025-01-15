@@ -15,6 +15,14 @@ java {
     }
 }
 
+publishing {
+    publications {
+        maven(MavenPublication) {
+		from components.java
+        }
+    }
+}
+
 repositories {
     // Maven Central
     mavenCentral()
